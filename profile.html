@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper login active">
+    <h1>Login</h1>
+    <p id="login-error"></p>
+    <form id="login-form">
+      <div>
+        <input type="email" id="login-email" placeholder="Email" required>
+      </div>
+      <div>
+        <input type="password" id="login-password" placeholder="Password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p>New here? <a href="#" id="go-register">Register</a></p>
+  </div>
+
+  <div class="wrapper register">
+    <h1>Register</h1>
+    <p id="register-error"></p>
+    <form id="register-form">
+      <div>
+        <input type="email" id="register-email" placeholder="Email" required>
+      </div>
+      <div>
+        <input type="password" id="register-password" placeholder="Password" required>
+      </div>
+      <div>
+        <input type="password" id="register-confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" id="go-login">Login</a></p>
+  </div>
+
+  <div class="wrapper personaldeets">
+    <h1>Register</h1>
+    <h2>Personal Details</h2>
+    <form id="personaldeets-form">
+        <label>Full Name</label>
+        <input type="text" id="full-name" placeholder="Enter full name" required>
+        <span class="error" id="name-error"></span>
+
+        <div class="dob-gender">
+            <div>
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+            <span class="error" id="dob-error"></span>
+            </div>
+            <div>
+            <label>Gender</label>
+            <div class="gender-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="NA" required> Prefer not to say</label>
+            </div>
+            <span class="error" id="gender-error"></span>
+            </div>
+        </div>
+
+        <div class="email-phone">
+            <div>
+            <label>Email</label>
+            <input type="email" id="personal-email" placeholder="Enter email" required>
+            <span class="error" id="email-error"></span>
+            </div>
+            <div>
+            <label>Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="\d*" inputmode="numeric">
+            </div>
+        </div>
+
+        <button type="submit">Next</button>
+    </form>
+  </div>
+
+  <div class="wrapper edbg">
+    <h1>Register</h1>
+    <h2>Education Background</h2>
+    <form id="edbg-form">
+        <div class="elem-year">
+            <div>
+            <label>Elementary School</label>
+            <input type="text" id="elem-school" placeholder="Enter elementary school attended" required>
+            <span class="error" id="elem-school-error"></span>
+            </div>
+            <div>
+            <label>Year Graduated</label>
+            <input type="text" id="elem-year" placeholder="Enter year graduated" required pattern="\d*" inputmode="numeric">
+            <span class="error" id="elem-year-error"></span>
+            </div>
+        </div>
+
+        <div class="hs-year">
+            <div>
+            <label>Last High School Attended</label>
+            <input type="text" id="hs-school" placeholder="Enter last high school attended" required>
+            <span class="error" id="hs-school-error"></span>
+            </div>
+            <div>
+            <label>Year Graduated</label>
+            <input type="text" id="hs-year" placeholder="Enter year graduated" required pattern="\d*" inputmode="numeric">
+            <span class="error" id="hs-year-error"></span>
+            </div>
+        </div>
+
+        <div class="gwa-discount">
+            <div>
+            <label>Latest GWA</label>
+            <input type="text" id="gwa" placeholder="Enter your latest GWA" pattern="\d*" inputmode="numeric">
+            </div>
+            <div>
+            <label>Entrance Discount</label>
+            <input type="text" id="discount">
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="wrapper profile-card" id="profilecard">
+    
+  </div>
+
+  <script src="app.js"></script>
+  <script> 
+    document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("showProfile") === "true") {
+      const user = {
+        email: params.get("email"),
+        password: params.get("password"),
+        personal: {
+          fullName: params.get("fullName") || "",
+          dob: params.get("dob") || "",
+          gender: params.get("gender") || "",
+          mobile: params.get("mobile") || ""
+        },
+        education: {
+          elemSchool: params.get("elemSchool") || "",
+          elemYear: params.get("elemYear") || "",
+          hsSchool: params.get("hsSchool") || "",
+          hsYear: params.get("hsYear") || "",
+          gwa: params.get("gwa") || "",
+          discount: params.get("discount") || ""
+        }
+      };
+
+      const view = new UserView(new InputData());
+      view.showProfile(user);
+      view.showPage("profile-card");
+    }
+    });
+   </script>
+
+
+
+
+
+</body>
+</html>

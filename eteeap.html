@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni | Franciscos University</title>
+<link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+   
+    * { margin:0; padding:0; 
+      box-sizing:border-box; 
+      font-family:'Segoe UI'; 
+     }
+    body { background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0); color: #0F1E2C; }
+
+    section {
+        background-color: #0F1E2C;
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    section h1 { font-size: 3em; margin-bottom:10px; letter-spacing:2px; animation: slideIn 1.5s ease-out forwards; opacity:0; }
+    section p { font-size:1.2em; max-width:800px; margin:0 auto; animation: fadeIn 2s ease-out forwards; opacity:0; }
+
+    @keyframes slideIn { 0% { transform: translateY(-50px); opacity:0; } 100% { transform: translateY(0); opacity:1; } }
+    @keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } }
+
+    .content {
+        max-width:1000px;
+        margin:50px auto;
+        padding:20px;
+        background:#fff;
+        border-radius:15px;
+        box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        line-height:1.8;
+        font-size:1.1em;
+        color:#0F1E2C;
+        animation: fadeInContent 2s ease forwards;
+        opacity:0;
+    }
+    .content p { margin-bottom:20px; }
+    @keyframes fadeInContent { 0% { opacity:0; transform: translateY(20px); } 100% { opacity:1; transform: translateY(0); } }
+
+    .highlight { color:#a10e0e; font-weight:bold; }
+    .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+    /* Footer */
+   footer {
+  background-color: #0F1E2C;
+  color: white;
+  padding: 40px 50px 20px;
+  font-family:'Segoe UI'; 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-logo img{
+  height:50px; 
+  width: auto; 
+}
+
+
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-social p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.social-icons a {
+  color: #FFD700;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.bottom-bar {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+.social-icons a i {
+  color: #a10e0e; 
+  transition: color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  color: #fff; 
+}
+
+
+    @media screen and (max-width:768px) { 
+        .footer-content { flex-direction:column;
+         align-items:center; text-align:center; 
+         } 
+         .footer-logo { 
+            justify-content:center; 
+            } 
+            }
+</style>
+</head>
+<body>
+<!--pakilagay nalang ng header na gawa-->
+<section>
+    <h1>Franciscos ETEEAP</h1>
+    <p>Expanded Tertiary education Equivalency and Accreditation Program</p>
+</section >
+
+<div class="content">
+    <p> Franciscos Expanded Tertiary Education equivalency and Accreditation Program (ETEEAP)</p>
+    <p>This program seeks to cultivate globally 
+        competitive professionals by recognizing and accrediting relevant workplace learning experiences in accordance with the institution’s
+         quality policies, standards, and core values. It is available to all undergraduates who were unable to complete their college education and, therefore, did not obtain a bachelor’s 
+         degree.</p>
+        <p><strong>Program Offered</strong></p>
+<ul>
+    <li>Bachelor of Science in Computer Science</li>
+    <li>Bachelor of Science in Information System</li>
+    <li>Bachelor of Science in Information Technology</li>
+    <li>Bachelor of Science in Computer Engineering</li>
+    <li>Bachelor of Science in Business Administration
+        <ul>
+            <li>Financial Management</li>
+            <li>Marketing Management</li>
+        </ul>
+    </li>
+</ul>
+
+        
+
+    <button class="accordion"><strong> Who can Enroll?</strong></button>
+<div class="panel">
+  <p><strong>Prospective Enrolles</strong></p>
+  <ul>
+    <li>Students who stopped but are now employed </li>
+    <li>Employed graduates who may want to earn a secodn degree</li>
+    <li>Undergraduate employees of business establishments and local government units</li>
+    <li>other who may be qualified </li>
+  </ul>
+  <p><strong>Qualifications</strong></p>
+  <ul>
+    <li>A Filipino and at leaset 23 years old as supported by PSA birth certificate; </li>
+    <li>Employed for an aggrate period of at least five (5) years in the industry. related to the academic degree or discipline. where equivalency of learning is being sought; and </li>
+    <li>Possess a high school diploma or a Philippine Educational Placement test (PEPT)/Alternative Learning System Certification stating "qualified to enter first year college</li>
+  </ul>
+</div>
+
+<button class="accordion"><strong>Admission Requirement </strong></button>
+<div class="panel">
+ <ul>
+    <li> Accomplished ETEEAP application and preliminary assessment forms with recent 1x1 ID picture and supporting documents, training certificates, recognitions, awards, etc.</li>
+    <li>School credentials: Transcript of Records, Diploma, Form 137/138</li>
+    <li>Comprehensive curriculum vitae</li>
+    <li>Statement of ownership/authenticity of credentials/supporting documents</li>
+    <li>Endorsement letter from the last, or the current employer</li>
+    <li>Other documents (PSA birth certificate, barangay clearance/NBI clearance/passport, marriage certificate [for married woman])</li>
+    <li>Provide proof/evidence to support/demonstrate compliance with the General and Program Criteria of ABET EAC (CpE & IE) and ABET CAC (CS & IT) Requirements, and all other accreditation/assessment requirements, that shall be discussed during the Application Process.</li>
+    <li>Other evidences to support capability and knowledge in the field for equivalency and accreditation </li>
+ </ul>
+</div>
+</div>
+        
+       
+  
+  <footer id="contactus">
+  <div class="footer-content">
+    <div class="footer-logo">
+         <img class= "logo-img" src="bilog png.png" alt="logo"> 
+      <h2>Franciscos University</h2>
+    </div>
+
+    <div class="footer-contact">
+      <p><strong>Campus Address:</strong> 938 Aurora Boulevard, Cubao, Quezon City 1109, Metro Manila, Philippines</p>
+      <p><strong>Telephone:</strong> 09266966010</p>
+      <p><strong>Email:</strong> info@franciscos.edu.ph</p>
+    </div>
+
+    <div class="footer-social">
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <p>All Rights Reserved © 2025</p>
+  </div>
+  <script>
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+</footer>
+
+</body>
+</html>

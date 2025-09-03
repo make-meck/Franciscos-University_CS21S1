@@ -1,0 +1,381 @@
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .wrapper.personaldeets,
+  .wrapper.edbg,
+  .wrapper.profile-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 15px;
+  }
+
+  .dob-gender,
+  .email-phone,
+  .elem-year,
+  .hs-year,
+  .gwa-discount {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dob-gender > div,
+  .email-phone > div,
+  .elem-year > div,
+  .hs-year > div,
+  .gwa-discount > div {
+    width: 100%;
+  }
+
+  #back-btn {
+    margin-right: 0;
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 15px !important;
+    margin: 15px 0 !important;
+  }
+
+  .wrapper h1 {
+    font-size: 1.4rem;
+  }
+
+  .wrapper.personaldeets h2,
+  .wrapper.edbg h2,
+  .wrapper.profile-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .wrapper form input,
+  .wrapper form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .gender-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .wrapper.profile-card button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #0d1b2a; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ---------- LOGIN + REGISTER CARDS ---------- */
+.wrapper {
+  display: none; 
+}
+
+.wrapper.active {
+  display: block; 
+}
+
+.wrapper {
+  background: #a4161a; 
+  color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  margin: 30px 0;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Error message */
+#error-message {
+  color: #ffcccc;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* Login/Register Form */
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrapper form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.wrapper form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background: #0d1b2a; 
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wrapper form button:hover {
+  background: #152d42;
+}
+
+.wrapper p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.wrapper a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- PERSONAL DETAILS CARD ---------- */
+.wrapper.personaldeets {
+  background: #ffffff;   
+  color: #0d1b2a;           
+  padding: 30px;
+  border-radius: 15px;
+  width: 650px;
+  text-align: left;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper.personaldeets h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.wrapper.personaldeets h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.wrapper.personaldeets label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.95rem;
+}
+
+#namelabel {
+  margin-bottom: 0px;
+}
+
+.wrapper.personaldeets input[type="text"],
+.wrapper.personaldeets input[type="date"],
+.wrapper.personaldeets input[type="email"],
+.wrapper.personaldeets input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 0.95rem;
+}
+
+.dob-gender,
+.email-phone {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.dob-gender > div,
+.email-phone > div {
+  flex: 1;
+}
+
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+  margin: 10px 0;
+  margin-bottom: 0px;
+}
+
+.gender-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wrapper.personaldeets button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #a4161a; 
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wrapper.personaldeets button:hover {
+  background: #8b1a1a;
+}
+
+/* ---------- EDUCATION BACKGROUND CARD ---------- */
+.wrapper.edbg {
+  background: #ffffff;  
+  color: #0d1b2a;         
+  padding: 30px;
+  border-radius: 15px;
+  width: 650px;
+  text-align: left;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper.edbg h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.wrapper.edbg h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.wrapper.edbg label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.95rem;
+}
+
+.wrapper.edbg input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 0.95rem;
+}
+
+.elem-year,
+.hs-year,
+.gwa-discount {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.elem-year > div,
+.hs-year > div,
+.gwa-discount > div {
+  flex: 1;
+}
+
+.wrapper.edbg button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #a4161a; 
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wrapper.edbg button:hover {
+  background: #8b1a1a;
+}
+
+/* ---------- PROFILE CARD ---------- */
+.wrapper.profile-card {
+  background: #a4161a; /* Deep red */
+  color: #fff; 
+  padding: 40px;
+  border-radius: 20px;
+  width: 750px;
+  text-align: left;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper.profile-card h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.wrapper.profile-card h2 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+}
+
+.wrapper.profile-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.wrapper.profile-card button {
+  margin-top: 20px;  
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  background: #0d1b2a; 
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wrapper.profile-card button:hover {
+  background: #152d42;
+}

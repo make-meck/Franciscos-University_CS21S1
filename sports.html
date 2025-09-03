@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports | Franciscos University</title>
+<link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+* {
+     margin:0; 
+     padding:0;
+      box-sizing:border-box; 
+      font-family: 'Segoe UI'; 
+    }
+body { 
+    background: 
+    inear-gradient(to bottom right, #f5f5f5, #e0e0e0); 
+    color: #0F1E2C; 
+}
+
+header {
+    background-color: #0F1E2C;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header h1 { font-size: 3em;
+     margin-bottom:10px; 
+     letter-spacing:2px; 
+     animation: slideIn 1.5s ease-out forwards; 
+     opacity:0; 
+    }
+header p { 
+    font-size:1.2em;
+     max-width:800px;
+     margin:0 auto; 
+     animation: fadeIn 2s ease-out forwards;
+      opacity:0;
+     }
+
+@keyframes slideIn {
+     0% { 
+        transform: translateY(-50px);
+         opacity:0; 
+        } 100% {
+             transform: translateY(0); 
+             opacity:1; 
+            } 
+        }
+@keyframes fadeIn {
+     0% { 
+        opacity:0; 
+    } 100% { opacity:1; } 
+}
+
+.content {
+    max-width:1000px;
+    margin:50px auto;
+    padding:20px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    line-height:1.8;
+    font-size:1.1em;
+    color:#0F1E2C;
+    animation: fadeInContent 2s ease forwards;
+    opacity:0;
+}
+.content p { 
+    margin-bottom:20px; 
+}
+@keyframes fadeInContent {
+     0% { opacity:0; transform: translateY(20px); }
+      100% { opacity:1; transform: translateY(0); } }
+
+.highlight { color:#a10e0e; font-weight:bold; }
+
+
+footer {
+  background-color: #0F1E2C;
+  color: white;
+  padding: 40px 50px 20px;
+  font-family:'Segoe UI'; 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-logo img{
+  height:50px; 
+  width: auto; 
+}
+
+
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-social p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.social-icons a {
+  color: #FFD700;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.bottom-bar {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+.social-icons a i {
+  color: #a10e0e; 
+  transition: color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  color: #fff; 
+}
+
+
+@media screen and (max-width:768px) {
+     .footer-content { flex-direction:column; align-items:center; text-align:center; } 
+     .footer-logo { justify-content:center; } 
+     }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Sports</h1>
+    <p>Franciscos University athletes excel in a variety of sports, developing teamwork, discipline, and school spirit both on and off the field.</p>
+</header>
+
+<div class="content">
+    <p>Our students participate in <span class="highlight">basketball, football, swimming, and many other sports</span>, representing Franciscos University in competitions and tournaments. Sports activities enhance physical fitness, leadership skills, and camaraderie among students.</p>
+    <p>We provide training, facilities, and support for our athletes to ensure they can perform at their best while maintaining academic excellence. Our sports programs cultivate <span class="highlight">teamwork, dedication, and school pride</span>.</p>
+</div>
+
+<footer id="contactus">
+  <div class="footer-content">
+    <div class="footer-logo">
+         <img class= "logo-img" src="bilog png.png" alt="logo"> 
+      <h2>Franciscos University</h2>
+    </div>
+
+    <div class="footer-contact">
+      <p><strong>Campus Address:</strong> 938 Aurora Boulevard, Cubao, Quezon City 1109, Metro Manila, Philippines</p>
+      <p><strong>Telephone:</strong> 09266966010</p>
+      <p><strong>Email:</strong> info@franciscos.edu.ph</p>
+    </div>
+
+    <div class="footer-social">
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <p>All Rights Reserved © 2025</p>
+  </div>
+</footer>
+
+</body>
+</html>

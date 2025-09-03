@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Franciscos University</title>
+</head>
+<body>
+    <header>
+        <img id = "logo" src = "final name and logo.png" alt = "logo">
+        <nav>
+            <ul>
+                <li><a href = "#">Home</a></li>
+                <li><a href = "about.html">About Us</a></li>
+                <li><a href = "#programsection">Program Offerings</a></li>
+                <li><a href = "#contactus">Contact Us</a></li>
+                <li><a href=" " id="view-profile-link">View Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = "description">
+        <div class = "divtext">
+            <h2 id="welcome-text">Welcome to Franciscos University!</h2>
+            <p>Since 1975, Franciscos University continues to provide the highest quality of education students can ever undergo. With students being our topmost priority, we are dedicated in helping them attain academic excellence through effective, student-centered learning modes. On top of that, we assure that our institution provides a secure and inclusive environment where students are surrounded by a supportive community and accommodating faculty members.</p>
+            <p id="register-section"><a href="profile.html">Register Now</a></p>
+        </div>
+    </div>
+<!-- hereee-->
+    <div class = "missionVisionAndPrograms">
+        <div class = "missionVision">
+            <div class = "missionVisionText">
+                <h4>MISSION</h4>
+                <p>To transform learners into future dependable leaders and highly competent professionals that contribute to the betterment of the community, by establishing quality, student-centered education in a safe and secure environment.</p>
+                <h4>VISION</h4>
+                <p id = "visionBotText">We envision a thriving learning community wherein individuals help one another to effectively develop one's knowledge and competencies, with the aim of contributing to the nation building as professionals in the future.</p>
+            </div>
+        </div>
+        
+        <div class = "programs">
+            <section id = "programsection">
+            <div class = "programOfferingsText">
+                <h4>PROGRAM OFFERINGS</h4>
+            </div>
+            </section>
+            <a class = "programLink" href = "architecture.html">
+            <div class = "specificPrograms">
+                    <h4>Architecture & Engineering</h4>
+                    <img  class = "arrow" src = "arrow.png">
+            </div>
+            </a>
+            <a class = "programLink" href = "arts.html">
+            <div class = "specificPrograms">
+                <h4>Arts</h4>
+                <img  class = "arrow" src = "arrow.png">
+            </div>
+            </a>
+            <a class = "programLink" href = "computerstudies.html">
+            <div class = "specificPrograms">
+                <h4>Computer Studies</h4>
+                <img  class = "arrow" src = "arrow.png">
+            </div>
+            </a>
+            <a class = "programLink" href = "arts.html">
+            <div class = "specificPrograms">
+                <h4>Education</h4>
+                <img  class = "arrow" src = "arrow.png">
+            </div>
+            </a>
+            <a class = "programLink" href = "business.html">
+            <div class = "specificPrograms">
+                <h4>Business & Accountancy</h4>
+                <img  class = "arrow" src = "arrow.png">
+            </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class = "campusLife">
+        <div class = "campusLifeText">
+            <h3>CAMPUS LIFE</h3>
+            <p>Franciscos University accommodates 15,000 students enrolled in various disciplines of arts and sciences. Each of which is eager to learn and improve their foundational talents, and build memorable connections with their fellow learners.</p>            
+            <p>Each day at the university serves as a new learning opportunity to students. They are continuously introduced to new learning concepts with materials provided by their accommodating professors. Their knowledge is regularly tested and observed through quizzes, assessments, and other forms of class activity. During vacants, students maximize their time to prepare for their next class while also connecting with their friends. </p>
+            <p>During examination week, the atmophere is occupied by determination and drive. The school’s library, open learning spaces, and nearby coffee shops are filled with numerous diligent students putting the greatest effort to pass their exams. Once the exams are over, the intense atmosphere and the students’ exam distress subsides.</p>
+            <p>The university is not only about developing students’ academic excellence. It also provides extracurricular activities to brighten up the Franciscosian life. Every year, representatives of different organizations host a lively event where students are enthusiastically invited to join clubs that align to their interests.</p>
+            <p>Students are the topmost priority at Franciscos University. The university assures that students are effectively attaining academic excellence while living their dream university life.</p>
+        </div>
+        <div class = "logo">
+            <img class = "logoimg" src = "bilog png.png">
+        </div>
+    </div>
+
+    <footer id="contactus">
+  <div class="footer-content">
+    <div class="footer-logo">
+         <img class= "logo-img" src="bilog png.png" alt="logo"> 
+      <h2>Franciscos University</h2>
+    </div>
+
+    <div class="footer-contact">
+      <p><strong>Campus Address:</strong> 938 Aurora Boulevard, Cubao, Quezon City 1109, Metro Manila, Philippines</p>
+      <p><strong>Telephone:</strong> 09266966010</p>
+      <p><strong>Email:</strong> info@franciscos.edu.ph</p>
+    </div>
+
+    <div class="footer-social">
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <p>All Rights Reserved © 2025</p>
+  </div>
+</footer>
+    
+    <script src="app.js"></script> 
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const profileLink = document.getElementById("view-profile-link");
+
+        if (params.has("email")) {
+            const user = {
+            email: params.get("email"),
+            password: params.get("password"),
+            personal: {
+                fullName: params.get("fullName") || "",
+                dob: params.get("dob") || "",
+                gender: params.get("gender") || "",
+                mobile: params.get("mobile") || ""
+            },
+            education: {
+                elemSchool: params.get("elemSchool") || "",
+                elemYear: params.get("elemYear") || "",
+                hsSchool: params.get("hsSchool") || "",
+                hsYear: params.get("hsYear") || "",
+                gwa: params.get("gwa") || "",
+                discount: params.get("discount") || ""
+            }
+            };
+
+            if (!window.allUsers) window.allUsers = [];
+            if (!window.allUsers.some(u => u.email === user.email)) {
+            window.allUsers.push(user);
+            }
+
+            window.currentUser  = user;
+
+            document.getElementById("welcome-text").textContent =
+            "Welcome, " + (user.personal.fullName) + "!";
+
+            document.getElementById("register-section").style.display = "none";
+
+            profileLink.href = `profile.html?${params.toString()}&showProfile=true`;
+        } else {
+            profileLink.addEventListener("click", e => {
+            e.preventDefault();
+            alert("Please log in or register first before viewing your profile.");
+            });
+        }
+        });
+    </script>
+
+
+
+</body>
+</html>

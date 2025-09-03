@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francicos University</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<body>
+    <header style ="background-color: #0F1E2C"> 
+        <div class="logo">
+            <img src="final name and logo.png" alt="logo"> 
+        </div>
+       
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <a href="#">About Us</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#history">History</a></li>
+                     <li><a href="#facilities">Campus Facilities</a></li>
+                      <li><a href="#Campus Life">Campus Life</a></li>
+                     <li><a href="#programs">Special Programs</a></li>
+                      </ul>
+                </li>
+
+                  <li><a href="index.html#programsection">Program Offering</a></li>
+                   <li><a href="#contactus">Contact Us </a></li>
+                   <li><a href = " ">View Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="history" id="history">
+    <div class="overlay"></div>
+    <div class="history-content">
+        <div class="history-title">
+            <h1>The History of <br> the University</h1>
+        </div>
+        <div class="history-box">
+           
+            <p>Founded in 1975, Franciscos University started as a small institute dedicated in providing quality education in arts and science. Over the decades, it has grown into one of the leading institution with over 15, 000 students, offering diverse programs from engineering to education 
+                <p>The campus has expanded to include modern laboratories, libraries, sports facilities, and innovation centers. we continue to uphold our mission of excellence, research, and community engagement.  </p>
+            
+        </div>
+    </div>
+</section>
+
+
+    <!--Campus facilities -->
+    <section class="facilities" id="facilities">
+        <h2>Campus Facilities</h2>
+        <div class="slider">
+            
+            <div class="facility-cards">
+                <div class="card"><img src="computer laboratory.jpg" ><p>Computer Laboratory</p></div>
+                <div class="card"><img src="main lib.jpg"><p>Main Library</p></div>
+                <div class="card"><img src="field.jpg"><p> Football Field</p></div>
+                <div class="card"><img src="pool.jpg" ><p>Swimming pool</p> </div>
+                <div class="card"><img src="cafeteria.jpg"> <p>Cafeteria</p></div>
+            </div>
+         <div class="dots"></div>
+         </div>
+    </section>
+    <!--Campus Life-->
+    <section class="campus-life" id="Campus Life">
+        <h2>Campus Life</h2>
+        <div class="options">
+            <div class="option-card">
+                <img src="student org.jpg">
+            <button class="campus-btn" onclick="location.href='student-org.html'">
+                Student Organization</button>
+            </div>
+            <div class="option-card"> 
+                <img src="alumni.jpg">
+            <button class="campus-btn" onclick="location.href='FU-alumni.html'">Alumni</button>
+            </div>
+            <div class="option-card"> 
+                <img src="sports.jpg">
+            <button class="campus-btn" onclick="location.href='sports.html'">Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Programs -->
+     <section class="special-programs" id="programs">         
+    <h2>Expanded Tertiary Education Equivalency and Accreditation Program</h2>
+    <div class="program-cards">
+        <div class="program-card">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>Prepare for careers in software development, programming, and systems analysis with a strong theoretical and practical foundation.</p>
+        </div>
+        <div class="program-card">
+            <h3>Bachelor of Science in Information Systems</h3>
+            <p>Develop skills in managing IT infrastructure, data analytics, and business information systems to support organizational goals.</p>
+        </div>
+        <div class="program-card">
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>Gain expertise in network administration, cybersecurity, and emerging technologies to meet modern IT demands.</p>
+        </div>
+        <div class="program-card">
+            <h3>Bachelor of Science in Computer Engineering</h3>
+            <p>Combine software and hardware knowledge to design, develop, and maintain computer systems and embedded solutions.</p>
+        </div>
+        <div class="program-card">
+            <h3>Bachelor of Science in Business Administration</h3>
+            <ul>
+                <li>Financial Management</li>
+                <li>Marketing Management</li>
+            </ul>
+        </div>
+        <div class="program-card" onclick="window.location.href='eteeap.html'">
+    <h3><p text align: center>See More </p></h3>
+    <p>Click here to learn more about ETEEAP</p>
+</div>
+</div>
+
+     
+                
+</section>
+
+     <!--Footer -->
+    <footer id="contactus">
+  <div class="footer-content">
+    <div class="footer-logo">
+         <img class= "logo-img" src="bilog png.png" alt="logo"> 
+      <h2>Franciscos University</h2>
+    </div>
+
+    <div class="footer-contact">
+      <p><strong>Campus Address:</strong> 938 Aurora Boulevard, Cubao, Quezon City 1109, Metro Manila, Philippines</p>
+      <p><strong>Telephone:</strong> 09266966010</p>
+      <p><strong>Email:</strong> info@franciscos.edu.ph</p>
+    </div>
+
+    <div class="footer-social">
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <p>All Rights Reserved © 2025</p>
+  </div>
+</footer>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.facility-cards .card');
+    const dotsContainer = document.querySelector('.dots');
+    const cardsPerBatch = 3;
+    const totalBatches = Math.ceil(cards.length / cardsPerBatch);
+    let currentBatch = 0;
+
+    // Create dots
+    for (let i = 0; i < totalBatches; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => showBatch(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    function showBatch(batch) {
+        currentBatch = batch;
+        cards.forEach((card, index) => {
+            const start = batch * cardsPerBatch;
+            const end = start + cardsPerBatch;
+            card.style.display = (index >= start && index < end) ? 'block' : 'none';
+        });
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = document.querySelectorAll('.dots .dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentBatch);
+        });
+    }
+
+    showBatch(0);
+
+    setInterval(() => {
+        currentBatch = (currentBatch + 1) % totalBatches;
+        showBatch(currentBatch);
+    }, 3000);
+});
+
+
+</script> 
+</body>
+</html>
